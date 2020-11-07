@@ -7,6 +7,7 @@ namespace DataStructureStackAndQueue
     public class LinkedListQueue
     {
         Node head = null;
+        Node tail = null;
 
         /// <summary>
         /// UC 3 Ability to create a Queue of 56->30->70
@@ -47,6 +48,31 @@ namespace DataStructureStackAndQueue
                 Console.WriteLine(temp.data + " ");
                 temp = temp.next;
             }
+        }
+
+        /// <summary>
+        /// UC 4 Ability to dequeue from the beginning
+        /// </summary>
+        internal void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty, deletion is not possible");
+                return;
+            }
+            else
+            {
+                Node temp = this.head;
+                this.head = this.head.next;
+
+                if (this.head == null)
+                {
+                    this.tail = null;
+                }
+                Console.WriteLine("{0} is deleted from Queue", temp.data);
+
+            }
+            Console.WriteLine("Linked List After Deletion");
         }
     }
 }
