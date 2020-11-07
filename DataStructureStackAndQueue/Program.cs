@@ -11,6 +11,13 @@ namespace DataStructureStackAndQueue
             linkedListStack.push(30);
             linkedListStack.push(56);
             linkedListStack.Display();
+
+            linkedListStack.Peek();
+            linkedListStack.Pop();
+            linkedListStack.Display();
+
+            linkedListStack.IsEmpty();
+            linkedListStack.Display();
         }
     }
 }
